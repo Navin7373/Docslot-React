@@ -26,7 +26,7 @@ function Home() {
   return (
     <>
       <Slide />
-      <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", marginTop: "50px", marginBottom: "50px" }}>
+      <div className="home-features">
         {Datas}
       </div>
       <List />

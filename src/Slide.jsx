@@ -5,13 +5,12 @@ import photo3 from "./assets/img3.png"
 
 function Slide() {
   return (
-    <div className='d-flex justify-content-center mt-5' style={{ paddingTop: "80px" }}>
-      <Carousel style={{ width: "75%" }} className="rounded overflow-hidden">
+    <div className="d-flex justify-content-center slide-carousel-wrap mt-2 mt-md-3">
+      <Carousel className="slide-carousel rounded overflow-hidden">
         <Carousel.Item>
           <img
             src={photo1}
             alt="slide"
-            style={{ width: "100%", height: "550px", objectFit: "fill" }}
           />
           <Carousel.Caption className='text-dark bg-light bg-opacity-50 rounded px-3 py-2'>
             <h3>Book Appointments Instantly</h3>
@@ -24,7 +23,6 @@ function Slide() {
           <img
             src={photo2}
             alt="slide"
-            style={{ width: "100%", height: "550px", objectFit: "fill" }}
           />
           <Carousel.Caption className='text-dark bg-light bg-opacity-50 rounded px-3 py-2'>
             <h3>Choose Date & Time Easily</h3>
@@ -37,7 +35,6 @@ function Slide() {
           <img
             src={photo3}
             alt="slide"
-            style={{ width: "100%", height: "550px", objectFit: "fill" }}
           />
           <Carousel.Caption className='text-dark bg-light bg-opacity-50 rounded px-3 py-2'>
             <h3>Manage Your Appointments</h3>

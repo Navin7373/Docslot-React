@@ -35,24 +35,16 @@ function Signup() {
     };
 
     return (
-        <div
-            style={{
-                minHeight: "100vh",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
+        <div className="auth-shell">
             <div
+                className="auth-card"
                 style={{
-                    width: "400px",
                     backgroundColor: "#fff",
-                    padding: "40px",
                     borderRadius: "15px",
                     boxShadow: "0 10px 25px rgba(0,0,0,0.2)"
                 }}
             >
-                <h2 style={{ textAlign: "center", marginBottom: "30px",paddingTop:"70px" }}>
+                <h2 style={{ textAlign: "center", marginBottom: "30px", paddingTop: "0" }}>
                     Create Account
                 </h2>
 

@@ -33,11 +33,8 @@
 
     return (
       <div
+        className="page-section"
         style={{
-          minHeight: "100vh",
-          paddingTop: "120px",
-          paddingLeft: "20px",
-          paddingRight: "20px",
           backgroundColor: "#f8f9fa"
         }}
       >
@@ -94,7 +91,7 @@
               maxWidth: "600px",
               margin: "0 auto",
               backgroundColor: "#fff",
-              padding: "30px",
+              padding: "clamp(1rem, 4vw, 1.875rem)",
               borderRadius: "12px",
               boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
             }}

@@ -1,8 +1,8 @@
 function File2({ Head, para }) {
   return (
     <div
+      className="feature-card"
       style={{
-        width: "300px",
         padding: "20px",
         border: "1px solid #ddd",
         borderRadius: "12px",

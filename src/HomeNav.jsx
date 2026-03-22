@@ -11,14 +11,14 @@ function HomeNav() {
   return (
     <Navbar expand="lg" className="bg-info-subtle  py-3 fixed-top">
       <Container>
-        <Nav.Link as={Link} to="/">
-          <img src={photo} width="150px" height="50px" alt="logo" />
+        <Nav.Link as={Link} to="/" className="py-0">
+          <img src={photo} width={150} height={50} className="navbar-brand-img" alt="Book-It logo" />
         </Nav.Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto fw-bold fs-5">
+          <Nav className="ms-auto fw-bold fs-6 fs-lg-5 text-center text-lg-start">
 
             {/* Hide Home if already on Home */}
             {location.pathname !== "/" && (

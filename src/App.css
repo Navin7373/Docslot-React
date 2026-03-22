@@ -1,4 +1,209 @@
-body {
-  margin: 0;
-  overflow-x: hidden;
+/* Offset content below fixed navbar */
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 100vw;
+  padding-top: 5.5rem;
+  padding-left: clamp(0.75rem, 3vw, 1.25rem);
+  padding-right: clamp(0.75rem, 3vw, 1.25rem);
+  padding-bottom: 0.5rem;
+}
+
+/* --- Home carousel --- */
+.slide-carousel-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.slide-carousel {
+  width: 100% !important;
+}
+
+.slide-carousel .carousel-item img {
+  width: 100%;
+  height: clamp(200px, 45vw, 550px);
+  object-fit: cover;
+}
+
+.slide-carousel .carousel-caption h3 {
+  font-size: clamp(1rem, 4vw, 1.75rem);
+}
+
+.slide-carousel .carousel-caption p {
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  margin-bottom: 0;
+}
+
+/* --- Feature cards (File2) --- */
+.feature-card {
+  width: min(100%, 300px);
+  max-width: 100%;
+}
+
+/* --- Who can use (File.jsx) --- */
+.who-card {
+  width: min(100%, 350px);
+  max-width: 100%;
+  min-height: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.who-card img {
+  width: 100%;
+  height: auto;
+  max-height: min(300px, 55vw);
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Doctor cards --- */
+.doctor-card {
+  width: min(100%, 300px);
+  max-width: 100%;
+  flex: 1 1 280px;
+  word-break: break-word;
+}
+
+.doctor-card img {
+  max-width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+}
+
+.doctor-card h4,
+.doctor-card .doctor-card-degree {
+  min-height: 0;
+  height: auto;
+}
+
+@media (min-width: 576px) {
+  .doctor-card h4 {
+    min-height: 3rem;
+  }
+
+  .doctor-card .doctor-card-degree {
+    min-height: 2.5rem;
+  }
+}
+
+/* --- Auth & form shells --- */
+.auth-shell {
+  min-height: calc(100vh - 5.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.auth-card {
+  width: min(100%, 400px);
+  max-width: 100%;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* --- Booking --- */
+.booking-page {
+  min-height: calc(100vh - 5.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f8f9fa;
+  padding: clamp(1rem, 4vw, 4rem) clamp(0.75rem, 3vw, 1.5rem);
+}
+
+.booking-card {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* --- Page sections (contact, profile, appointments) --- */
+.page-section {
+  min-height: calc(100vh - 5.5rem);
+  padding-top: clamp(0.5rem, 2vw, 1.5rem);
+  padding-bottom: 1.5rem;
+}
+
+/* --- Doctors grid --- */
+.doctors-page {
+  padding: clamp(0.5rem, 2vw, 1rem);
+  padding-top: 0;
+}
+
+.doctors-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 3vw, 1.25rem);
+}
+
+/* --- Home feature row --- */
+.home-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 4vw, 1.5rem);
+  margin-top: clamp(1.5rem, 5vw, 3rem);
+  margin-bottom: clamp(1.5rem, 5vw, 3rem);
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.who-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 4vw, 1.5rem);
+}
+
+/* --- Navbar logo --- */
+.navbar-brand-img {
+  width: auto;
+  max-width: min(150px, 42vw);
+  height: auto;
+  max-height: 44px;
+  object-fit: contain;
+}
+
+/* --- Contact page info cards --- */
+.contact-info-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(0.75rem, 3vw, 1.25rem);
+}
+
+.contact-info-card {
+  flex: 1 1 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 576px) {
+  .contact-info-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: min(100%, 320px);
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-info-card {
+    flex: 1 1 200px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .app-main {
+    padding-top: 5rem;
+  }
+
+  .slide-carousel .carousel-caption {
+    padding: 0.35rem 0.5rem !important;
+  }
 }
