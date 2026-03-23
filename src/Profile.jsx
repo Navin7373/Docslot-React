@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 import pat1 from "./assets/pat1.png";
 
+const DEFAULT_PROFILE = {
+    name: "Naveen",
+    email: "naveenselvaraj416@gmail.com",
+    phone: "8056503974",
+    age: "23"
+};
+
 function Profile() {
 
     const [editMode, setEditMode] = useState(false);
 
-    const [profile, setProfile] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        age: ""
-    });
+    const [profile, setProfile] = useState(DEFAULT_PROFILE);
 
     const [appointments, setAppointments] = useState([]); 
 
@@ -18,7 +20,7 @@ function Profile() {
     useEffect(() => {
         const storedProfile = JSON.parse(localStorage.getItem("profile"));
         if (storedProfile) {
-            setProfile(storedProfile);
+            setProfile(prev => ({ ...prev, ...storedProfile }));
         }
     }, []);
 
@@ -91,9 +93,10 @@ function Profile() {
                     <div key={field} style={{ marginBottom: "15px" }}>
                         <label style={{ textTransform: "capitalize" }}>{field}:</label>
                         <input
-                            type={field === "age" ? "number" : "text"}
+                            type={field === "age" ? "number" : field === "email" ? "email" : "text"}
                             name={field}
                             value={profile[field]}
+                            placeholder={DEFAULT_PROFILE[field]}
                             onChange={handleChange}
                             disabled={!editMode}
                             style={{ width: "100%", padding: "8px" }}
