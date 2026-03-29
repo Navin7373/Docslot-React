@@ -19,11 +19,8 @@ function MyAppointments() {
 
   return (
     <div
+      className="page-section"
       style={{
-        minHeight: "100vh",
-        paddingTop: "120px",
-        paddingLeft: "20px",
-        paddingRight: "20px",
         backgroundColor: "#f8f9fa"
       }}
     >

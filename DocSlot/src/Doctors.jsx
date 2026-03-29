@@ -132,8 +132,8 @@ function Doctors() {
   const specializations = [...new Set(doctors.map(doc => doc.specialization))];
 
   return (
-    <div style={{ padding: "10PX", paddingTop: "50px" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "40px",paddingTop:"30px",color:"#0dcaf0" }}>
+    <div className="doctors-page">
+      <h2 style={{ textAlign: "center", marginBottom: "clamp(1.5rem, 5vw, 2.5rem)", paddingTop: "clamp(0.5rem, 2vw, 1rem)", color: "#0dcaf0" }}>
         Available Doctors
       </h2>
 
@@ -152,14 +152,7 @@ function Doctors() {
             {spec}
           </h3>
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              flexWrap: "wrap",
-              gap: "20px"
-            }}
-          >
+          <div className="doctors-grid">
             {doctors
               .filter(doc => doc.specialization === spec)
               .map(doc => (

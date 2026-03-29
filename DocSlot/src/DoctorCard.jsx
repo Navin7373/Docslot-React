@@ -6,8 +6,8 @@ function DoctorCard({ doctor }) {
 
   return (
     <div
+      className="doctor-card"
       style={{
-        width: "300px",
         border: "1px solid #ddd",
         borderRadius: "12px",
         padding: "15px",
@@ -20,8 +20,9 @@ function DoctorCard({ doctor }) {
         src={doctor.image}
         alt={doctor.name}
         style={{
-          width: "180px",
-          height: "230px",
+          width: "100%",
+          maxWidth: "180px",
+          aspectRatio: "180 / 230",
           backgroundColor: "#f5f5f5",
           borderRadius: "10px",
           marginBottom: "10px"
@@ -30,17 +31,17 @@ function DoctorCard({ doctor }) {
 
 
       {/* Doctor Name */}
-      <h4 style={{ marginBottom: "5px",height:"50px" }}>
+      <h4 style={{ marginBottom: "5px" }}>
         {doctor.name}
       </h4>
 
       {/* Degree */}
       <p
+        className="doctor-card-degree"
         style={{
-          fontSize: "18px",
+          fontSize: "clamp(14px, 3.5vw, 18px)",
           color: "gray",
-          marginTop: "0",
-          height: "40px"
+          marginTop: "0"
         }}
       >
         {doctor.degree}

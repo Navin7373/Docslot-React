@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 import pat1 from "./assets/pat1.png";
 
+const DEFAULT_PROFILE = {
+    name: "Naveen",
+    email: "naveenselvaraj416@gmail.com",
+    phone: "8056503974",
+    age: "23"
+};
+
 function Profile() {
 
     const [editMode, setEditMode] = useState(false);
 
-    const [profile, setProfile] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        age: ""
-    });
+    const [profile, setProfile] = useState(DEFAULT_PROFILE);
 
     const [appointments, setAppointments] = useState([]); 
 
@@ -18,7 +20,7 @@ function Profile() {
     useEffect(() => {
         const storedProfile = JSON.parse(localStorage.getItem("profile"));
         if (storedProfile) {
-            setProfile(storedProfile);
+            setProfile(prev => ({ ...prev, ...storedProfile }));
         }
     }, []);
 
@@ -52,11 +54,8 @@ function Profile() {
 
     return (
         <div
+            className="page-section"
             style={{
-                minHeight: "100vh",
-                paddingTop: "120px",
-                paddingLeft: "20px",
-                paddingRight: "20px",
                 backgroundColor: "#f8f9fa"
             }}
         >
@@ -65,7 +64,7 @@ function Profile() {
                     maxWidth: "700px",
                     margin: "0 auto",
                     backgroundColor: "#fff",
-                    padding: "30px",
+                    padding: "clamp(1rem, 4vw, 1.875rem)",
                     borderRadius: "12px",
                     boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
                 }}
@@ -94,9 +93,10 @@ function Profile() {
                     <div key={field} style={{ marginBottom: "15px" }}>
                         <label style={{ textTransform: "capitalize" }}>{field}:</label>
                         <input
-                            type={field === "age" ? "number" : "text"}
+                            type={field === "age" ? "number" : field === "email" ? "email" : "text"}
                             name={field}
                             value={profile[field]}
+                            placeholder={DEFAULT_PROFILE[field]}
                             onChange={handleChange}
                             disabled={!editMode}
                             style={{ width: "100%", padding: "8px" }}

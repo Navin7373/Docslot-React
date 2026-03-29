@@ -10,6 +10,11 @@ body {
   font-family: "times new roman";
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #root {
   min-height: 100vh;
   display: flex;

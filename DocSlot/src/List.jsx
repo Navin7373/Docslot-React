@@ -33,7 +33,7 @@ function List() {
           Designed exclusively for medical appointment scheduling
         </p>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap" }}>
+      <div className="who-row">
         {Data}
       </div>
     </>

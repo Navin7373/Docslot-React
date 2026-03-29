@@ -37,19 +37,11 @@ function Login({ setUser }) {
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="auth-shell">
       <div
+        className="auth-card"
         style={{
-          width: "400px",
           backgroundColor: "#fff",
-          padding: "40px",
           borderRadius: "15px",
           boxShadow: "0 10px 25px rgba(0,0,0,0.35)"
         }}

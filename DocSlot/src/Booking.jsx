@@ -21,7 +21,7 @@ function Booking() {
   });
 
   if (!doctor) {
-    return <h2 style={{ paddingTop: "100px" }}>No Doctor Selected</h2>;
+    return <h2 className="text-center py-4">No Doctor Selected</h2>;
   }
 
   const handleChange = (e) => {
@@ -60,22 +60,12 @@ function Booking() {
 
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#f8f9fa",
-        padding: "120px"
-      }}
-    >
+    <div className="booking-page">
       <div
+        className="booking-card"
         style={{
-          width: "100%",
-          maxWidth: "500px",
           backgroundColor: "#fff",
-          padding: "30px",
+          padding: "clamp(1rem, 4vw, 1.875rem)",
           borderRadius: "12px",
           boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
         }}

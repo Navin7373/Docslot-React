@@ -23,7 +23,7 @@ function App() {
         <ScrollToTop />
         <HomeNav user={user} setUser={setUser} />
 
-        <main style={{ flex: 1 }}>
+        <main className="app-main">
           <Routes>
 
             <Route path="/" element={<Home />} />
